@@ -28,20 +28,6 @@ class LeslieData:
     white: np.ndarray
 
 
-def load_boltzmann_data() -> BoltzmannData:
-    filepath = Path("results_boltzmann.csv")
-    results = np.loadtxt(filepath, delimiter=",")
-    return BoltzmannData(
-        results[:, 0], results[:, 1], results[:, 2], results[:, 3], results[:, 4] / 1000
-    )
-
-
-def load_leslie_data() -> LeslieData:
-    filepath = Path("results_leslie.csv")
-    results = np.loadtxt(filepath, delimiter=",", skiprows=1, usecols=[1, 2, 3, 4])
-    return LeslieData(results[0], results[1], results[2], results[3], results[4])
-
-
 def get_resistance(U: np.ndarray, I: np.ndarray) -> np.ndarray:
     return U / I
 

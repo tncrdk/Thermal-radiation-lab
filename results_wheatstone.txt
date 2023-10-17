@@ -1,6 +1,0 @@
-[Wheatstone bridge]
-R1 = 10k [ohm]
-R3 = 100 [ohm]
-R2 = 37.0 [ohm] (Med kabel)
-Kabel = 6.1 [ohm]
-
